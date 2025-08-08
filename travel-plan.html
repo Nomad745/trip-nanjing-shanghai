@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南京上海5日游 - 旅行规划指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-blue: rgb(25, 89, 227);
+            --primary-blue-50: rgba(25, 89, 227, 0.5);
+            --primary-blue-20: rgba(25, 89, 227, 0.2);
+            --primary-blue-10: rgba(25, 89, 227, 0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-50) 100%);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 200px;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans overflow-x-hidden">
+    <!-- Header Section -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-6xl md:text-8xl font-black mb-4 text-shadow">
+                南京<span class="text-blue-500">上海</span>
+            </h1>
+            <div class="text-4xl md:text-6xl font-bold mb-6">
+                <span class="gradient-bg bg-clip-text text-transparent">5日游</span>
+            </div>
+            <p class="text-xl text-gray-300">Travel Planning Guide</p>
+            <div class="flex justify-center items-center gap-4 mt-6">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-calendar-alt text-blue-500"></i>
+                    <span class="text-lg">2025.08.13 - 08.17</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-users text-blue-500"></i>
+                    <span class="text-lg">2人</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
+            
+            <!-- 热度排名 - 大卡片 -->
+            <div class="md:col-span-2 lg:col-span-3 glass-effect rounded-2xl p-6 hover-scale">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-fire text-3xl text-red-500"></i>
+                    <h2 class="text-2xl font-bold">热度排名</h2>
+                    <span class="text-sm text-gray-400">TOP 5</span>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 p-3 rounded-lg bg-gradient-to-r from-yellow-500/20 to-transparent">
+                        <div class="text-4xl font-black text-yellow-500">1</div>
+                        <div>
+                            <div class="text-xl font-bold">上海迪士尼乐园</div>
+                            <div class="text-sm text-gray-400">极高热度 • 攻略丰富</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4 p-3 rounded-lg bg-gradient-to-r from-gray-400/20 to-transparent">
+                        <div class="text-4xl font-black text-gray-400">2</div>
+                        <div>
+                            <div class="text-xl font-bold">上海外滩</div>
+                            <div class="text-sm text-gray-400">高热度 • 免费景点</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4 p-3 rounded-lg bg-gradient-to-r from-orange-500/20 to-transparent">
+                        <div class="text-4xl font-black text-orange-500">3</div>
+                        <div>
+                            <div class="text-xl font-bold">南京夫子庙秦淮河</div>
+                            <div class="text-sm text-gray-400">高热度 • 古韵浓厚</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-blue-500/10">
+                            <div class="text-2xl font-black text-blue-500">4</div>
+                            <div class="text-sm">豫园城隍庙</div>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-blue-500/10">
+                            <div class="text-2xl font-black text-blue-500">5</div>
+                            <div class="text-sm">南京中山陵</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 预算总览 -->
+            <div class="md:col-span-2 lg:col-span-2 glass-effect rounded-2xl p-6 hover-scale">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-wallet text-2xl text-green-500"></i>
+                    <h2 class="text-xl font-bold">预算总览</h2>
+                </div>
+                
+                <div class="text-center mb-6">
+                    <div class="text-5xl font-black text-green-500 mb-2">¥4200</div>
+                    <div class="text-sm text-gray-400">人均预算上限</div>
+                </div>
+                
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm">交通</span>
+                        <div class="flex items-center gap-2">
+                            <div class="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="w-2/5 h-full bg-blue-500"></div>
+                            </div>
+                            <span class="text-sm text-blue-500">40%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm">住宿</span>
+                        <div class="flex items-center gap-2">
+                            <div class="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="w-1/4 h-full bg-purple-500"></div>
+                            </div>
+                            <span class="text-sm text-purple-500">25%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm">餐饮</span>
+                        <div class="flex items-center gap-2">
+                            <div class="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="w-1/5 h-full bg-orange-500"></div>
+                            </div>
+                            <span class="text-sm text-orange-500">20%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm">门票</span>
+                        <div class="flex items-center gap-2">
+                            <div class="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="w-3/20 h-full bg-red-500"></div>
+                            </div>
+                            <span class="text-sm text-red-500">15%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5日行程卡片区域 -->
+            <div class="md:col-span-4 lg:col-span-6 space-y-6">
+                <!-- 路线图 -->
+                <div class="glass-effect rounded-2xl p-6 hover-scale">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-route text-2xl text-blue-500"></i>
+                        <h2 class="text-2xl font-bold">旅行路线</h2>
+                        <span class="text-sm text-gray-400">Travel Route</span>
+                    </div>
+                    
+                    <!-- 双线路线图 -->
+                    <div class="space-y-8">
+                        <!-- 北京出发路线 -->
+                        <div class="relative">
+                            <div class="text-xs text-blue-400 mb-2 font-bold">北京出发路线</div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-lg font-black text-white mb-2">北</div>
+                                    <div class="text-xs text-center">
+                                        <div class="font-bold">北京</div>
+                                        <div class="text-gray-400">09:00航班</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-1 flex items-center mx-3">
+                                    <div class="flex-1 h-px bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                                    <i class="fas fa-plane text-blue-500 mx-2 text-sm"></i>
+                                    <div class="flex-1 h-px bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                                </div>
+                                
+                                <div class="flex flex-col items-center">
+                                    <div class="w-14 h-14 bg-purple-500 rounded-full flex items-center justify-center text-lg font-black text-white mb-2">宁</div>
+                                    <div class="text-xs text-center">
+                                        <div class="font-bold">南京2天</div>
+                                        <div class="text-gray-400">古都文化</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-1 flex items-center mx-3">
+                                    <div class="flex-1 h-px bg-gradient-to-r from-purple-500 to-green-500"></div>
+                                    <i class="fas fa-train text-green-500 mx-2 text-sm"></i>
+                                    <div class="flex-1 h-px bg-gradient-to-r from-purple-500 to-green-500"></div>
+                                </div>
+                                
+                                <div class="flex flex-col items-center">
+                                    <div class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-lg font-black text-white mb-2">沪</div>
+                                    <div class="text-xs text-center">
+                                        <div class="font-bold">上海3天</div>
+                                        <div class="text-gray-400">现代都市</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-1 flex items-center mx-3">
+                                    <div class="flex-1 h-px bg-gradient-to-r from-green-500 to-blue-500"></div>
+                                    <i class="fas fa-plane-departure text-blue-500 mx-2 text-sm"></i>
+                                    <div class="flex-1 h-px bg-gradient-to-r from-green-500 to-blue-500"></div>
+                                </div>
+                                
+                                <div class="flex flex-col items-center">
+                                    <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-lg font-black text-white mb-2">北</div>
+                                    <div class="text-xs text-center">
+                                        <div class="font-bold">返回北京</div>
+                                        <div class="text-gray-400">17:00航班</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 三亚出发路线 -->
+                        <div class="relative">
+                            <div class="text-xs text-orange-400 mb-2 font-bold">三亚出发路线</div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center text-lg font-black text-white mb-2">三</div>
+                                    <div class="text-xs text-center">
+                                        <div class="font-bold">三亚</div>
+                                        <div class="text-gray-400">08:30航班</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-1 flex items-center mx-3">
+                                    <div class="flex-1 h-px bg-gradient-to-r from-orange-500 to-purple-500"></div>
+                                    <i class="fas fa-plane text-orange-500 mx-2 text-sm"></i>
+                                    <div class="flex-1 h-px bg-gradient-to-r from-orange-500 to-purple-500"></div>
+                                </div>
+                                
+                                <div class="flex flex-col items-center">
+                                    <div class="w-14 h-14 bg-purple-500 rounded-full flex items-center justify-center text-lg font-black text-white mb-2">宁</div>
+                                    <div class="text-xs text-center">
+                                        <div class="font-bold">南京2天</div>
+                                        <div class="text-gray-400">古都文化</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-1 flex items-center mx-3">
+                                    <div class="flex-1 h-px bg-gradient-to-r from-purple-500 to-green-500"></div>
+                                    <i class="fas fa-train text-green-500 mx-2 text-sm"></i>
+                                    <div class="flex-1 h-px bg-gradient-to-r from-purple-500 to-green-500"></div>
+                                </div>
+                                
+                                <div class="flex flex-col items-center">
+                                    <div class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-lg font-black text-white mb-2">沪</div>
+                                    <div class="text-xs text-center">
+                                        <div class="font-bold">上海3天</div>
+                                        <div class="text-gray-400">现代都市</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-1 flex items-center mx-3">
+                                    <div class="flex-1 h-px bg-gradient-to-r from-green-500 to-orange-500"></div>
+                                    <i class="fas fa-plane-departure text-orange-500 mx-2 text-sm"></i>
+                                    <div class="flex-1 h-px bg-gradient-to-r from-green-500 to-orange-500"></div>
+                                </div>
+                                
+                                <div class="flex flex-col items-center">
+                                    <div class="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center text-lg font-black text-white mb-2">三</div>
+                                    <div class="text-xs text-center">
+                                        <div class="font-bold">返回三亚</div>
+                                        <div class="text-gray-400">18:30航班</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 grid grid-cols-2 gap-4 text-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt text-blue-500"></i>
+                            <span>出发地：北京、三亚</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-calendar-alt text-purple-500"></i>
+                            <span>总行程：5天4夜</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5日行程卡片网格 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Day 1 -->
+                    <div class="glass-effect rounded-2xl p-6 hover-scale cursor-pointer day-card" data-day="1">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-2xl font-black">1</div>
+                            <div>
+                                <h3 class="text-xl font-bold">抵达南京</h3>
+                                <p class="text-sm text-gray-400">08.13 • 古都初探</p>
+                            </div>
+                            <i class="fas fa-chevron-right ml-auto text-gray-400 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-blue-500/10">
+                                <i class="fas fa-plane text-blue-500"></i>
+                                <span class="text-sm">09:00-15:00 分批抵达</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-purple-500/10">
+                                <i class="fas fa-mountain text-purple-500"></i>
+                                <span class="text-sm">15:00-18:00 中山陵</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-orange-500/10">
+                                <i class="fas fa-water text-orange-500"></i>
+                                <span class="text-sm">18:30-21:30 秦淮河夜游</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 flex justify-between text-sm">
+                            <span class="text-gray-400">预算</span>
+                            <span class="text-green-500 font-bold">¥800/人</span>
+                        </div>
+                        
+                        <div class="mt-3 text-center">
+                            <span class="text-xs text-blue-500">点击查看详细行程</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="glass-effect rounded-2xl p-6 hover-scale cursor-pointer day-card" data-day="2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-2xl font-black">2</div>
+                            <div>
+                                <h3 class="text-xl font-bold">南京深度游</h3>
+                                <p class="text-sm text-gray-400">08.14 • 高铁赴沪</p>
+                            </div>
+                            <i class="fas fa-chevron-right ml-auto text-gray-400 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-blue-500/10">
+                                <i class="fas fa-university text-blue-500"></i>
+                                <span class="text-sm">09:00-11:00 南京博物院</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-red-500/10">
+                                <i class="fas fa-landmark text-red-500"></i>
+                                <span class="text-sm">11:00-13:30 总统府</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-green-500/10">
+                                <i class="fas fa-train text-green-500"></i>
+                                <span class="text-sm">14:30-16:00 高铁赴沪</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 flex justify-between text-sm">
+                            <span class="text-gray-400">预算</span>
+                            <span class="text-green-500 font-bold">¥600/人</span>
+                        </div>
+                        
+                        <div class="mt-3 text-center">
+                            <span class="text-xs text-purple-500">点击查看详细行程</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 - 迪士尼乐园 -->
+                    <div class="glass-effect rounded-2xl p-6 hover-scale cursor-pointer day-card" data-day="3">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-2xl font-black">3</div>
+                            <div>
+                                <h3 class="text-xl font-bold">🏰 迪士尼乐园</h3>
+                                <p class="text-sm text-gray-400">08.15 • 全天游玩</p>
+                            </div>
+                            <i class="fas fa-chevron-right ml-auto text-gray-400 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-blue-500/10">
+                                <i class="fas fa-castle text-blue-500"></i>
+                                <span class="text-sm">08:30-21:30 全天游玩</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-purple-500/10">
+                                <i class="fas fa-rocket text-purple-500"></i>
+                                <span class="text-sm">飞越地平线 + 创极速光轮</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-orange-500/10">
+                                <i class="fas fa-magic text-orange-500"></i>
+                                <span class="text-sm">20:30 烟花秀</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 flex justify-between text-sm">
+                            <span class="text-gray-400">预算</span>
+                            <span class="text-green-500 font-bold">¥999/人</span>
+                        </div>
+                        
+                        <div class="mt-3 text-center">
+                            <span class="text-xs text-blue-500">点击查看详细攻略</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 4 -->
+                    <div class="glass-effect rounded-2xl p-6 hover-scale cursor-pointer day-card" data-day="4">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-2xl font-black">4</div>
+                            <div>
+                                <h3 class="text-xl font-bold">上海经典游</h3>
+                                <p class="text-sm text-gray-400">08.16 • 市区精华</p>
+                            </div>
+                            <i class="fas fa-chevron-right ml-auto text-gray-400 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-blue-500/10">
+                                <i class="fas fa-building text-blue-500"></i>
+                                <span class="text-sm">09:00-12:00 外滩南京路</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-orange-500/10">
+                                <i class="fas fa-pagoda text-orange-500"></i>
+                                <span class="text-sm">🏮 13:30-18:00 豫园城隍庙</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-purple-500/10">
+                                <i class="fas fa-city text-purple-500"></i>
+                                <span class="text-sm">18:00-21:30 陆家嘴夜景</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 flex justify-between text-sm">
+                            <span class="text-gray-400">预算</span>
+                            <span class="text-green-500 font-bold">¥700/人</span>
+                        </div>
+                        
+                        <div class="mt-3 text-center">
+                            <span class="text-xs text-green-500">点击查看详细行程</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 5 -->
+                    <div class="glass-effect rounded-2xl p-6 hover-scale cursor-pointer day-card" data-day="5">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-2xl font-black">5</div>
+                            <div>
+                                <h3 class="text-xl font-bold">愉快返程</h3>
+                                <p class="text-sm text-gray-400">08.17 • 徐家汇购物</p>
+                            </div>
+                            <i class="fas fa-chevron-right ml-auto text-gray-400 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-blue-500/10">
+                                <i class="fas fa-church text-blue-500"></i>
+                                <span class="text-sm">09:00-12:00 天主教堂</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-green-500/10">
+                                <i class="fas fa-shopping-bag text-green-500"></i>
+                                <span class="text-sm">12:00-15:00 商圈购物</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg bg-red-500/10">
+                                <i class="fas fa-plane-departure text-red-500"></i>
+                                <span class="text-sm">15:00-17:00 返程</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 flex justify-between text-sm">
+                            <span class="text-gray-400">预算</span>
+                            <span class="text-green-500 font-bold">¥400/人</span>
+                        </div>
+                        
+                        <div class="mt-3 text-center">
+                            <span class="text-xs text-orange-500">点击查看详细行程</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 旅游优化建议 -->
+            <div class="md:col-span-4 lg:col-span-3 glass-effect rounded-2xl p-6 hover-scale">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-lightbulb text-2xl text-pink-500"></i>
+                    <h2 class="text-2xl font-bold">🎯 旅游优化建议</h2>
+                    <span class="text-sm text-gray-400">Hot Tips</span>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-3">
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-pink-500/20 to-transparent">
+                            <div class="font-bold text-pink-500 mb-1">中山陵</div>
+                            <div class="text-sm text-gray-300">梧桐大道16:00-17:00最佳拍照</div>
+                        </div>
+                        
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-orange-500/20 to-transparent">
+                            <div class="font-bold text-orange-500 mb-1">夫子庙</div>
+                            <div class="text-sm text-gray-300">19:30-20:30夜景最美</div>
+                        </div>
+                        
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-transparent">
+                            <div class="font-bold text-blue-500 mb-1">迪士尼</div>
+                            <div class="text-sm text-gray-300">开园冲刺飞越地平线</div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-transparent">
+                            <div class="font-bold text-green-500 mb-1">外滩</div>
+                            <div class="text-sm text-gray-300">上午10点前人少光线好</div>
+                        </div>
+                        
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-purple-500/20 to-transparent">
+                            <div class="font-bold text-purple-500 mb-1">豫园</div>
+                            <div class="text-sm text-gray-300">等19:00亮灯拍夜景</div>
+                        </div>
+                        
+                        <div class="p-3 rounded-lg bg-gradient-to-r from-red-500/20 to-transparent">
+                            <div class="font-bold text-red-500 mb-1">避坑提醒</div>
+                            <div class="text-sm text-gray-300">不要租私人电动车</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 总预算明细 -->
+            <div class="md:col-span-2 lg:col-span-2 glass-effect rounded-2xl p-6 hover-scale cursor-pointer budget-card" data-budget="total">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-2xl">
+                        <i class="fas fa-calculator text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">💰 总预算明细</h3>
+                        <p class="text-sm text-gray-400">5天4晚 • 人均费用</p>
+                    </div>
+                    <i class="fas fa-chevron-right ml-auto text-gray-400 transition-transform duration-300"></i>
+                </div>
+                
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 p-2 rounded-lg bg-blue-500/10">
+                        <i class="fas fa-plane text-blue-500"></i>
+                        <span class="text-sm">交通费用：¥800-1200</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-2 rounded-lg bg-purple-500/10">
+                        <i class="fas fa-bed text-purple-500"></i>
+                        <span class="text-sm">住宿费用：¥1600-2400</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-2 rounded-lg bg-orange-500/10">
+                        <i class="fas fa-utensils text-orange-500"></i>
+                        <span class="text-sm">餐饮费用：¥800-1200</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-2 rounded-lg bg-red-500/10">
+                        <i class="fas fa-ticket-alt text-red-500"></i>
+                        <span class="text-sm">门票费用：¥800-1000</span>
+                    </div>
+                </div>
+                
+                <div class="mt-4 flex justify-between text-sm">
+                    <span class="text-gray-400">总预算</span>
+                    <span class="text-green-500 font-bold">¥4000-5800/人</span>
+                </div>
+                
+                <div class="mt-3 text-center">
+                    <span class="text-xs text-green-500">点击查看详细预算分析</span>
+                </div>
+            </div>
+
+
+
+
+            <!-- 必备物品 -->
+            <div class="md:col-span-2 lg:col-span-2 glass-effect rounded-2xl p-6 hover-scale">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-suitcase text-2xl text-yellow-500"></i>
+                    <h2 class="text-xl font-bold">必备物品</h2>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-3 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-id-card text-blue-500"></i>
+                        <span>身份证</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-graduation-cap text-green-500"></i>
+                        <span>学生证</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-mobile-alt text-purple-500"></i>
+                        <span>手机充电宝</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-camera text-orange-500"></i>
+                        <span>相机</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-sun text-yellow-500"></i>
+                        <span>防晒霜</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-umbrella text-blue-500"></i>
+                        <span>折叠伞</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-pills text-red-500"></i>
+                        <span>常用药品</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-shoe-prints text-gray-500"></i>
+                        <span>舒适鞋子</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 推荐APP -->
+            <div class="md:col-span-2 lg:col-span-1 glass-effect rounded-2xl p-6 hover-scale">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-mobile-alt text-2xl text-cyan-500"></i>
+                    <h2 class="text-lg font-bold">推荐APP</h2>
+                </div>
+                
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-map-marked-alt text-blue-500"></i>
+                        <span>高德地图</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <span>大众点评</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-subway text-green-500"></i>
+                        <span>Metro大都会</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-castle text-purple-500"></i>
+                        <span>🏰 迪士尼官方</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-utensils text-orange-500"></i>
+                        <span>美团</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-bed text-pink-500"></i>
+                        <span>携程</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center py-8">
+            <div class="text-6xl font-black mb-4">
+                <span class="gradient-bg bg-clip-text text-transparent">ENJOY</span>
+            </div>
+            <p class="text-xl text-gray-400">Your Perfect Journey</p>
+            <div class="flex justify-center gap-6 mt-6">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone text-blue-500"></i>
+                    <span class="text-sm">12301 旅游投诉</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-shield-alt text-green-500"></i>
+                    <span class="text-sm">110/120/119 紧急救援</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 详细行程弹窗 -->
+    <div id="dayModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-black border border-gray-700 rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden relative">
+                <!-- 固定的关闭按钮 -->
+                <button id="closeModal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+                
+                <!-- 可滚动内容区域 -->
+                <div class="max-h-[90vh] overflow-y-auto">
+                    <div class="bg-black/90 backdrop-blur-sm border-b border-gray-700 p-6 pr-16">
+                        <h2 id="modalTitle" class="text-2xl font-bold"></h2>
+                    </div>
+                    <div id="modalContent" class="p-6">
+                        <!-- 动态内容将在这里插入 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 详细行程数据
+        const dayDetails = {
+            1: {
+                title: "Day 1 - 抵达南京·古都初探",
+                date: "2025年8月13日（周三）",
+                content: `
+                    <div class="space-y-8">
+                        <!-- 分批抵达汇合 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-plane text-xl text-blue-500"></i>
+                                <h3 class="text-xl font-bold">09:00-15:00 分批抵达汇合</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-blue-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 交通费：北京-南京机票800-1200元/人，三亚-南京机票1000-1500元/人，机场大巴20元/人</li>
+                                        <li>• 住宿费：南京市区酒店（夫子庙附近）标准间350元/晚</li>
+                                        <li>• 餐饮费：机场简餐50元/人</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-orange-500 mb-3">⏰ 时间安排</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 开放时间：机场大巴06:00-23:00，每20分钟一班</li>
+                                        <li>• 游览时长：机场到市区约45分钟</li>
+                                        <li>• 排队预估：机场安检15分钟，大巴候车10分钟</li>
+                                        <li>• 最佳时段：北京出发者选择09:00前航班，三亚出发者12:00后起飞</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-purple-500 mb-3">🚗 交通&地点详情</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 具体路线：禄口机场→机场大巴1号线→夫子庙站</li>
+                                        <li>• 步行时间：大巴站到酒店约5分钟</li>
+                                        <li>• 费用参考：打车约80元，地铁S1+1号线约8元</li>
+                                        <li>• 地点详情：建议选择夫子庙景区内酒店，步行可达各景点</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-yellow-500/10 rounded-lg">
+                                <p class="text-sm"><i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                                <strong>注意事项：</strong>建议提前3天预订机票和酒店，三亚出发者注意台风季节影响</p>
+                            </div>
+                        </div>
+
+                        <!-- 中山陵景区游览 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-mountain text-xl text-purple-500"></i>
+                                <h3 class="text-xl font-bold">15:00-18:00 中山陵景区游览 ⭐⭐⭐⭐⭐</h3>
+                            </div>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-green-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 交通费：地铁2号线6元/人，景区观光车10元/人</li>
+                                        <li>• 门票费：中山陵免费，美龄宫30元/人，音乐台10元/人</li>
+                                        <li>• 餐饮费：景区内茶饮20元/人</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-orange-500 mb-3">⏰ 时间安排</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 开放时间：中山陵08:30-17:00，美龄宫08:30-17:30</li>
+                                        <li>• 游览时长：中山陵1.5小时，美龄宫1小时</li>
+                                        <li>• 排队预估：周三人流较少，排队约10分钟</li>
+                                        <li>• 最佳时段：下午光线柔和，适合拍照</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-purple-500 mb-3">🚗 交通&地点详情</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 具体路线：酒店→地铁1号线新街口站→2号线下马坊站→观光车</li>
+                                        <li>• 步行时间：地铁站到景区入口约10分钟</li>
+                                        <li>• 费用参考：全程约16元/人</li>
+                                        <li>• 地点详情：中山陵位于紫金山南麓，国父陵墓所在地</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-pink-500/10 rounded-lg">
+                                <p class="text-sm"><i class="fas fa-camera text-pink-500 mr-2"></i>
+                                <strong>游览优化建议：</strong>梧桐大道16:00-17:00光线最佳，游览顺序：地铁苜蓿园站→电瓶车→美龄宫→音乐台→中山陵</p>
+                            </div>
+                        </div>
+
+                        <!-- 夫子庙秦淮河夜游 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-water text-xl text-orange-500"></i>
+                                <h3 class="text-xl font-bold">18:30-21:30 夫子庙秦淮河夜游 ⭐⭐⭐⭐⭐</h3>
+                            </div>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-blue-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 交通费：地铁返程6元/人</li>
+                                        <li>• 门票费：秦淮河画舫80元/人，江南贡院30元/人</li>
+                                        <li>• 餐饮费：夫子庙小吃街100元/人</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-orange-500 mb-3">⏰ 时间安排</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 开放时间：夫子庙全天，画舫19:00-21:30</li>
+                                        <li>• 游览时长：夫子庙1小时，画舫游览40分钟</li>
+                                        <li>• 排队预估：画舫周三排队约15分钟</li>
+                                        <li>• 最佳时段：19:30-20:30夜景最美</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-purple-500 mb-3">🚗 交通&地点详情</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 具体路线：下马坊站→地铁2号线→1号线三山街站</li>
+                                        <li>• 步行时间：地铁站到夫子庙约8分钟</li>
+                                        <li>• 费用参考：地铁6元，步行免费</li>
+                                        <li>• 地点详情：夫子庙位于秦淮河北岸，明清古建筑群</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-green-500/10 rounded-lg">
+                                <h5 class="font-bold text-green-500 mb-2">🍽️ 美食推荐</h5>
+                                <div class="grid md:grid-cols-2 gap-4 text-sm">
+                                    <div>
+                                        <strong>特色菜品：</strong>鸭血粉丝汤18元，小笼包15元，桂花糖芋苗12元
+                                    </div>
+                                    <div>
+                                        <strong>推荐餐厅：</strong>奇芳阁、永和园、莲湖糕团店，人均消费80-120元
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-orange-500/10 rounded-lg">
+                                <p class="text-sm"><i class="fas fa-lightbulb text-orange-500 mr-2"></i>
+                                <strong>游览优化建议：</strong>19:30-20:30灯光最美，按"避开99%人群的绝美路线"游览，秦淮河倒影和古建筑群是必拍点</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            2: {
+                title: "Day 2 - 南京深度游·高铁赴沪",
+                date: "2025年8月14日（周四）",
+                content: `
+                    <div class="space-y-8">
+                        <!-- 南京博物院探秘 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-university text-xl text-blue-500"></i>
+                                <h3 class="text-xl font-bold">09:00-11:00 南京博物院探秘 ⏰缩短30分钟</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-green-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 地铁2号线：4元/人</li>
+                                        <li>• 门票：免费（需预约）</li>
+                                        <li>• 博物院咖啡厅：30元/人</li>
+                                        <li>• 讲解器租借：20元</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-purple-500 mb-3">🚗 交通路线</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 酒店→地铁1号线→2号线明故宫站</li>
+                                        <li>• 地铁站到博物院约10分钟步行</li>
+                                        <li>• 地址：中山东路321号</li>
+                                        <li>• 中国三大博物馆之一</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-red-500/10 rounded-lg">
+                                <p class="text-sm"><i class="fas fa-clock text-red-500 mr-2"></i>
+                                <strong>基于用户反馈调整：</strong>重点参观历史馆和特展馆（避免"逛不下去"），时间从2.5小时压缩至2小时，建议租借讲解器提高参观效率</p>
+                            </div>
+                        </div>
+
+                        <!-- 总统府历史之旅 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-landmark text-xl text-red-500"></i>
+                                <h3 class="text-xl font-bold">11:00-13:30 总统府历史之旅 ⭐⭐⭐</h3>
+                            </div>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-blue-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 交通：公交2元/人或步行</li>
+                                        <li>• 总统府门票：40元/人</li>
+                                        <li>• 午餐：80元/人</li>
+                                        <li>• 讲解：人工100元或语音20元</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-green-500 mb-3">🍽️ 美食推荐</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 盐水鸭</li>
+                                        <li>• 美龄粥</li>
+                                        <li>• 鸭油酥烧饼</li>
+                                        <li>• 1912街区内餐厅、韩复兴</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-orange-500 mb-3">📸 必打卡点</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 总统府门楼</li>
+                                        <li>• 大堂"天下为公"</li>
+                                        <li>• 子超楼</li>
+                                        <li>• 孙中山办公室</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-blue-500/10 rounded-lg">
+                                <p class="text-sm"><i class="fas fa-route text-blue-500 mr-2"></i>
+                                <strong>交通路线：</strong>明故宫站→步行15分钟或公交304路→长江路292号，近代中国政治中心</p>
+                            </div>
+                        </div>
+
+                        <!-- 高铁前往上海 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-train text-xl text-green-500"></i>
+                                <h3 class="text-xl font-bold">14:30-16:00 高铁前往上海</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-blue-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 地铁到南京南站：6元/人</li>
+                                        <li>• 高铁二等座：134元/人</li>
+                                        <li>• 高铁盒饭：40元/人</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-purple-500 mb-3">⏰ 时间安排</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 建议班次：14:30-15:00</li>
+                                        <li>• 行程时长：约1小时20分钟</li>
+                                        <li>• 安检+检票：15分钟</li>
+                                        <li>• 提前30分钟到达车站</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 抵达上海·迪士尼初体验 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-castle text-xl text-pink-500"></i>
+                                <h3 class="text-xl font-bold">16:30-21:00 抵达上海·迪士尼初体验</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-green-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 地铁11号线：12元/人</li>
+                                        <li>• 迪士尼附近酒店：800元/晚</li>
+                                        <li>• 迪士尼小镇晚餐：120元/人</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-orange-500 mb-3">🍽️ 美食推荐</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 迪士尼主题餐厅</li>
+                                        <li>• 国际美食</li>
+                                        <li>• 小镇内各主题餐厅</li>
+                                        <li>• 人均消费：100-150元</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-pink-500/10 rounded-lg">
+                                <p class="text-sm"><i class="fas fa-lightbulb text-pink-500 mr-2"></i>
+                                <strong>游览建议：</strong>虹桥站→地铁11号线迪士尼站，晚上小镇夜景更美，迪士尼城堡和小镇夜景是必拍点</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            3: {
+                title: "Day 3 - 上海迪士尼乐园",
+                date: "2025年8月15日（周五）",
+                content: `
+                    <div class="space-y-8">
+                        <!-- 迪士尼乐园全天游玩 -->
+                        <div class="glass-effect rounded-xl p-6 gradient-bg">
+                            <div class="flex items-center gap-3 mb-6">
+                                <i class="fas fa-castle text-xl text-white"></i>
+                                <h3 class="text-xl font-bold text-white">08:30-21:30 迪士尼乐园全天游玩 ⭐⭐⭐⭐⭐</h3>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-white/10 rounded-xl p-4">
+                                    <h4 class="text-xl font-bold text-white mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm text-white/90">
+                                        <li>• 交通费：步行或酒店班车免费</li>
+                                        <li>• 门票费：迪士尼乐园499元/人（提前官网购买）</li>
+                                        <li>• 餐饮费：园内用餐200元/人（可自带水和小食）</li>
+                                        <li>• 快速通行证：120元/人（热门项目必备）</li>
+                                        <li class="font-bold text-yellow-300">• 总预算：人均800-1000元</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="bg-white/10 rounded-xl p-4">
+                                    <h4 class="text-xl font-bold text-white mb-3">🍽️ 美食推荐</h4>
+                                    <ul class="space-y-2 text-sm text-white/90">
+                                        <li>• 迪士尼主题套餐</li>
+                                        <li>• 米奇头汉堡</li>
+                                        <li>• 皇家宴会厅</li>
+                                        <li>• 巴波萨烧烤</li>
+                                        <li>• 人均消费：150-250元</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-white/10 rounded-xl p-6">
+                                <h4 class="text-2xl font-bold text-white mb-4">🔥 深度游玩攻略</h4>
+                                
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h5 class="text-lg font-bold text-yellow-300 mb-3">游玩路线优化（错峰攻略）</h5>
+                                        <ol class="space-y-2 text-sm text-white/90 list-decimal list-inside">
+                                            <li><strong>08:30开园冲刺</strong>：飞越地平线（最热门）</li>
+                                            <li><strong>上午</strong>：雷鸣山漂流→加勒比海盗</li>
+                                            <li><strong>中午</strong>：创极速光轮→七个小矮人矿山车</li>
+                                            <li><strong>下午</strong>：小飞侠天空奇遇→其他项目</li>
+                                            <li><strong>晚上</strong>：花车巡游→20:30烟花秀</li>
+                                        </ol>
+                                    </div>
+                                    
+                                    <div>
+                                        <h5 class="text-lg font-bold text-green-300 mb-3">实用建议</h5>
+                                        <ul class="space-y-2 text-sm text-white/90">
+                                            <li>• 下载官方APP，实时查看排队时间</li>
+                                            <li>• 购买快速通行证，节省排队时间</li>
+                                            <li>• 带充电宝，全天拍照耗电量大</li>
+                                            <li>• 园内消费较高，可自带水和小食</li>
+                                            <li>• 城堡、各主题区标志性建筑必拍</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white/10 rounded-lg p-3 text-center">
+                                    <div class="text-2xl font-black text-white mb-1">13h</div>
+                                    <div class="text-xs text-white/80">游玩时长</div>
+                                </div>
+                                <div class="bg-white/10 rounded-lg p-3 text-center">
+                                    <div class="text-2xl font-black text-white mb-1">30-60min</div>
+                                    <div class="text-xs text-white/80">热门项目排队</div>
+                                </div>
+                                <div class="bg-white/10 rounded-lg p-3 text-center">
+                                    <div class="text-2xl font-black text-white mb-1">20:30</div>
+                                    <div class="text-xs text-white/80">烟花秀时间</div>
+                                </div>
+                                <div class="bg-white/10 rounded-lg p-3 text-center">
+                                    <div class="text-2xl font-black text-white mb-1">08:30</div>
+                                    <div class="text-xs text-white/80">开园时间</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            4: {
+                title: "Day 4 - 上海经典市区游",
+                date: "2025年8月16日（周六）",
+                content: `
+                    <div class="space-y-8">
+                        <!-- 外滩南京路经典游 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-building text-xl text-blue-500"></i>
+                                <h3 class="text-xl font-bold">09:00-12:00 外滩南京路经典游 ⭐⭐⭐⭐⭐</h3>
+                            </div>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-green-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 地铁11号线转9号线：15元/人</li>
+                                        <li>• 外滩：免费</li>
+                                        <li>• 南京路午餐：80元/人</li>
+                                        <li>• 松江住宿：免费 ✅</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-orange-500 mb-3">🍽️ 美食推荐</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 生煎包、小笼包、白切鸡</li>
+                                        <li>• 南翔馒头店</li>
+                                        <li>• 沈大成、老正兴</li>
+                                        <li>• 人均消费：60-100元</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-purple-500 mb-3">⏰ 时间安排</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 外滩：全天开放</li>
+                                        <li>• 南京路商店：10:00-22:00</li>
+                                        <li>• 外滩1小时，南京路1小时</li>
+                                        <li>• 最佳时段：上午光线好</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-blue-500/10 rounded-lg">
+                                <h5 class="font-bold text-blue-500 mb-2">🔥 基于"我来外滩只做三件事"优化</h5>
+                                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                                    <div>
+                                        <strong>1. 万国建筑群拍照</strong><br>
+                                        感受"仿佛在伦敦"的氛围
+                                    </div>
+                                    <div>
+                                        <strong>2. 乍浦路桥日落</strong><br>
+                                        最佳观景点
+                                    </div>
+                                    <div>
+                                        <strong>3. 特色美食</strong><br>
+                                        金鱼小馄饨、芭乐雪冰、一元一串M6和牛
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 豫园城隍庙文化游 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-pagoda text-xl text-orange-500"></i>
+                                <h3 class="text-xl font-bold">13:30-18:00 豫园城隍庙文化游 ⭐⭐⭐⭐</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-blue-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 地铁：2元/人</li>
+                                        <li>• 豫园：40元/人</li>
+                                        <li>• 城隍庙：10元/人</li>
+                                        <li>• 城隍庙小吃：100元/人</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-green-500 mb-3">🍽️ 美食推荐（老字号升级）</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 南翔小笼包、蟹壳黄、梨膏糖</li>
+                                        <li>• 南翔馒头店、绿波廊</li>
+                                        <li>• 上海老饭店、大壶春</li>
+                                        <li>• 松鹤楼、沈大成</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-orange-500/10 rounded-lg">
+                                <h5 class="font-bold text-orange-500 mb-2">🔥 融入本地人详细攻略，延长30分钟</h5>
+                                <div class="text-sm">
+                                    <strong>优化游览顺序（本地人推荐）：</strong><br>
+                                    • 15:30-16:30：豫园园林（30元门票）<br>
+                                    • 16:30-17:00：城隍庙（10元门票）<br>
+                                    • 17:00-18:00：豫园商城+九曲桥<br>
+                                    • 18:00后：等待19:00亮灯拍夜景
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 陆家嘴夜景游 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-city text-xl text-purple-500"></i>
+                                <h3 class="text-xl font-bold">18:00-21:30 陆家嘴夜景游 ⭐⭐⭐</h3>
+                            </div>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-blue-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 地铁：4元/人</li>
+                                        <li>• 上海中心观景台：180元/人</li>
+                                        <li>• 黄浦江游船：120元/人</li>
+                                        <li>• 陆家嘴晚餐：150元/人</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-green-500 mb-3">🍽️ 美食推荐</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 精致本帮菜、国际料理</li>
+                                        <li>• 上海中心观景餐厅</li>
+                                        <li>• IFC商场餐厅</li>
+                                        <li>• 人均消费：120-200元</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-orange-500 mb-3">⏰ 时间安排</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 上海中心：09:00-21:30</li>
+                                        <li>• 游船：19:00-21:00</li>
+                                        <li>• 观景台1小时，游船1小时</li>
+                                        <li>• 最佳时段：19:00-20:00</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-purple-500/10 rounded-lg">
+                                <h5 class="font-bold text-purple-500 mb-2">🔥 增加"上海三件套"拍照建议</h5>
+                                <div class="text-sm">
+                                    • 东方明珠、金茂大厦、上海中心大厦合影<br>
+                                    • 632米高空俯瞰上海全景<br>
+                                    • 黄浦江两岸夜景
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 返回松江休息 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-bed text-xl text-gray-500"></i>
+                                <h3 class="text-xl font-bold">21:30-23:00 返回松江休息</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-blue-500 mb-3">🚗 交通路线</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 陆家嘴站→2号线→1号线→9号线松江新城站</li>
+                                        <li>• 总用时：约1小时</li>
+                                        <li>• 费用：地铁12元</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-green-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 交通费：地铁12元/人</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            5: {
+                title: "Day 5 - 上海市区深度游·愉快返程",
+                date: "2025年8月17日（周日）",
+                content: `
+                    <div class="space-y-8">
+                        <!-- 徐家汇天主教堂文化游 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-church text-xl text-blue-500"></i>
+                                <h3 class="text-xl font-bold">09:00-12:00 徐家汇天主教堂文化游</h3>
+                            </div>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-green-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 地铁9号线转1号线：8元/人</li>
+                                        <li>• 徐家汇天主教堂：免费参观</li>
+                                        <li>• 徐家汇商圈咖啡：50元/人</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-purple-500 mb-3">🚗 交通详情</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 松江新城站→9号线→1号线徐家汇站</li>
+                                        <li>• 地铁站到天主教堂约5分钟步行</li>
+                                        <li>• 地址：蒲西路158号</li>
+                                        <li>• 哥特式建筑风格，"远东第一大教堂"</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-orange-500 mb-3">⏰ 时间安排</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 天主教堂：06:00-18:00</li>
+                                        <li>• 商圈：10:00-22:00</li>
+                                        <li>• 游览时长：3小时</li>
+                                        <li>• 最佳时段：上午光线好</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-blue-500/10 rounded-lg">
+                                <p class="text-sm"><i class="fas fa-camera text-blue-500 mr-2"></i>
+                                <strong>优化建议：</strong>哥特式教堂建筑、现代商圈对比拍照，港汇恒隆、美罗城本地人推荐店铺</p>
+                            </div>
+                        </div>
+
+                        <!-- 徐家汇商圈购物体验 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-shopping-bag text-xl text-green-500"></i>
+                                <h3 class="text-xl font-bold">12:00-15:00 徐家汇商圈购物体验</h3>
+                            </div>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-blue-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 交通费：步行免费</li>
+                                        <li>• 商圈：免费</li>
+                                        <li>• 商圈午餐：120元/人</li>
+                                        <li>• 购物费：根据个人需求（可选）</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-green-500 mb-3">🍽️ 美食推荐</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 日韩料理、东南亚菜</li>
+                                        <li>• 上海本帮菜、西式简餐</li>
+                                        <li>• 港汇恒隆B2美食广场</li>
+                                        <li>• 美罗城各层餐厅</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-orange-500 mb-3">⏰ 时间安排</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 商场：10:00-22:00</li>
+                                        <li>• 游览时长：3小时</li>
+                                        <li>• 餐厅排队：约20分钟</li>
+                                        <li>• 最佳时段：午餐时间避开高峰</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-green-500/10 rounded-lg">
+                                <p class="text-sm"><i class="fas fa-shopping-cart text-green-500 mr-2"></i>
+                                <strong>购物建议：</strong>天主教堂→步行至港汇恒隆→步行至美罗城，上海西南重要商圈，集购物、餐饮、娱乐于一体</p>
+                            </div>
+                        </div>
+
+                        <!-- 返程准备 -->
+                        <div class="glass-effect rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-plane-departure text-xl text-red-500"></i>
+                                <h3 class="text-xl font-bold">15:00-17:00 返程准备</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-lg font-bold text-blue-500 mb-3">💰 费用明细</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 地铁到虹桥机场/火车站：8元/人</li>
+                                        <li>• 地铁到浦东机场：15元/人</li>
+                                        <li>• 其他费用：机场建设费、行李托运等</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-orange-500 mb-3">⏰ 时间安排</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 到虹桥约30分钟，到浦东约1小时</li>
+                                        <li>• 国内航班提前2小时，高铁提前1小时</li>
+                                        <li>• 周日返程高峰，安检排队30分钟</li>
+                                        <li>• 根据返程时间倒推，预留充足时间</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-red-500/10 rounded-lg">
+                                <h5 class="font-bold text-red-500 mb-2">🚗 交通路线详情</h5>
+                                <div class="text-sm space-y-2">
+                                    <div><strong>虹桥机场/火车站：</strong>徐家汇站→1号线→2号线虹桥机场站，约30分钟</div>
+                                    <div><strong>浦东机场：</strong>徐家汇站→1号线→2号线龙阳路站→磁悬浮，约1小时</div>
+                                    <div><strong>返回北京：</strong>建议选择17:00后航班，CZ6291（18:25-21:35）或类似时段</div>
+                                    <div><strong>返回三亚：</strong>建议选择18:00后航班，CZ6293（19:15-22:25）或类似时段</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // 弹窗控制
+        const modal = document.getElementById('dayModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const closeModal = document.getElementById('closeModal');
+
+        // 为每个日程卡片添加点击事件
+        document.querySelectorAll('.day-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const day = card.getAttribute('data-day');
+                const dayData = dayDetails[day];
+                
+                if (dayData) {
+                    modalTitle.textContent = dayData.title;
+                    modalContent.innerHTML = `
+                        <div class="mb-6 text-center">
+                            <p class="text-xl text-gray-400">${dayData.date}</p>
+                        </div>
+                        ${dayData.content}
+                    `;
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // 为预算卡片添加点击事件
+        document.querySelectorAll('.budget-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const budget = card.getAttribute('data-budget');
+                
+                if (budget === 'total') {
+                    modalTitle.textContent = '💰 总预算明细分析';
+                    modalContent.innerHTML = `
+                        <div class="mb-6 text-center">
+                            <p class="text-xl text-gray-400">5天4晚南京上海游 • 人均预算</p>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-xl font-bold text-white mb-4">💸 费用构成</h4>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between items-center p-3 rounded-lg bg-blue-500/10">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fas fa-plane text-blue-500"></i>
+                                            <span>交通费用</span>
+                                        </div>
+                                        <span class="text-blue-500 font-bold">¥800-1200</span>
+                                    </div>
+                                    <div class="flex justify-between items-center p-3 rounded-lg bg-purple-500/10">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fas fa-bed text-purple-500"></i>
+                                            <span>住宿费用</span>
+                                        </div>
+                                        <span class="text-purple-500 font-bold">¥1600-2400</span>
+                                    </div>
+                                    <div class="flex justify-between items-center p-3 rounded-lg bg-orange-500/10">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fas fa-utensils text-orange-500"></i>
+                                            <span>餐饮费用</span>
+                                        </div>
+                                        <span class="text-orange-500 font-bold">¥800-1200</span>
+                                    </div>
+                                    <div class="flex justify-between items-center p-3 rounded-lg bg-red-500/10">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fas fa-ticket-alt text-red-500"></i>
+                                            <span>门票费用</span>
+                                        </div>
+                                        <span class="text-red-500 font-bold">¥800-1000</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 p-4 bg-green-500/10 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-lg font-bold">总计</span>
+                                        <span class="text-green-500 text-xl font-bold">¥4000-5800/人</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-xl font-bold text-white mb-4">💡 省钱攻略</h4>
+                                <div class="space-y-3 text-sm">
+                                    <div class="p-3 rounded-lg bg-yellow-500/10">
+                                        <div class="font-bold text-yellow-500 mb-1">✈️ 交通优化</div>
+                                        <div class="text-gray-300">提前预订机票，选择高铁二等座，使用地铁日票</div>
+                                    </div>
+                                    <div class="p-3 rounded-lg bg-blue-500/10">
+                                        <div class="font-bold text-blue-500 mb-1">🏨 住宿优化</div>
+                                        <div class="text-gray-300">选择地铁沿线酒店，避开节假日，提前预订</div>
+                                    </div>
+                                    <div class="p-3 rounded-lg bg-green-500/10">
+                                        <div class="font-bold text-green-500 mb-1">🍜 餐饮优化</div>
+                                        <div class="text-gray-300">品尝当地小吃，避开景区餐厅，选择老字号</div>
+                                    </div>
+                                    <div class="p-3 rounded-lg bg-purple-500/10">
+                                        <div class="font-bold text-purple-500 mb-1">🎫 门票优化</div>
+                                        <div class="text-gray-300">官网预订，学生证优惠，团购门票</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/5 rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-white mb-4">📊 预算分档建议</h4>
+                            <div class="grid md:grid-cols-3 gap-4">
+                                <div class="text-center p-4 rounded-lg bg-green-500/10">
+                                    <div class="text-2xl font-bold text-green-500 mb-2">¥4000-4500</div>
+                                    <div class="text-sm text-green-400 mb-2">经济型</div>
+                                    <div class="text-xs text-gray-400">青旅/快捷酒店 + 当地小吃</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-blue-500/10">
+                                    <div class="text-2xl font-bold text-blue-500 mb-2">¥4500-5200</div>
+                                    <div class="text-sm text-blue-400 mb-2">舒适型</div>
+                                    <div class="text-xs text-gray-400">三星酒店 + 特色餐厅</div>
+                                </div>
+                                <div class="text-center p-4 rounded-lg bg-purple-500/10">
+                                    <div class="text-2xl font-bold text-purple-500 mb-2">¥5200-5800</div>
+                                    <div class="text-sm text-purple-400 mb-2">豪华型</div>
+                                    <div class="text-xs text-gray-400">四星酒店 + 精品餐厅</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // 关闭弹窗
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        // 点击背景关闭弹窗
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // ESC键关闭弹窗
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Framer Motion animations
+        const { motion } = window.Motion;
+        
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.hover-scale').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Add interactive hover effects
+        document.querySelectorAll('.hover-scale').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                if (!card.classList.contains('day-card')) {
+                    card.style.transform = 'scale(1.02) translateY(-5px)';
+                    card.style.boxShadow = '0 20px 40px rgba(25, 89, 227, 0.3)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                if (!card.classList.contains('day-card')) {
+                    card.style.transform = 'scale(1) translateY(0)';
+                    card.style.boxShadow = 'none';
+                }
+            });
+        });
+
+        // Day card specific hover effects
+        document.querySelectorAll('.day-card').forEach(card => {
+            const chevron = card.querySelector('.fa-chevron-right');
+            
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.02) translateY(-5px)';
+                card.style.boxShadow = '0 20px 40px rgba(25, 89, 227, 0.3)';
+                if (chevron) {
+                    chevron.style.transform = 'translateX(5px)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1) translateY(0)';
+                card.style.boxShadow = 'none';
+                if (chevron) {
+                    chevron.style.transform = 'translateX(0)';
+                }
+            });
+        });
+
+        // Animate numbers on scroll
+        function animateNumbers() {
+            const numbers = document.querySelectorAll('.text-5xl, .text-4xl, .text-3xl');
+            numbers.forEach(num => {
+                const text = num.textContent;
+                if (text.includes('¥') || text.includes('%') || !isNaN(text.charAt(0))) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.style.animation = 'pulse 1s ease-in-out';
+                            }
+                        });
+                    });
+                    observer.observe(num);
+                }
+            });
+        }
+
+        animateNumbers();
+
+        // Add CSS animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
