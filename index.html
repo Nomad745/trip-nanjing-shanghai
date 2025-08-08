@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>南京上海5日游 - 旅行规划指南</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': 'rgb(25, 89, 227)',
+                    }
+                }
+            }
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -16,21 +27,25 @@
             --primary-blue-10: rgba(25, 89, 227, 0.1);
         }
         
-        。gradient-bg {
+        .gradient-bg {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-50) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
         }
         
-        。glass-effect {
+        .glass-effect {
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         }
         
-        。text-shadow {
+        .text-shadow {
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
-        。hover-scale {
+        .hover-scale {
             transition: transform 0.3s ease;
         }
         
@@ -41,6 +56,78 @@
         .chart-container {
             position: relative;
             height: 200px;
+        }
+        
+        /* 确保标题渐变效果在所有浏览器中正常显示 */
+        .bg-clip-text {
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            color: transparent !important;
+        }
+        
+        /* 备用方案：如果backdrop-filter不支持 */
+        @supports not (backdrop-filter: blur(10px)) {
+            .glass-effect {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+        }
+        
+        /* 强制显示标题 */
+        h1 {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* 确保5日游文字显示 */
+        .gradient-bg.bg-clip-text.text-transparent {
+            background: linear-gradient(135deg, #1959e3 0%, rgba(25, 89, 227, 0.8) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        
+        /* 如果渐变文字不显示，使用备用颜色 */
+        @supports not (-webkit-background-clip: text) {
+            .gradient-bg.bg-clip-text.text-transparent {
+                color: #1959e3 !important;
+                -webkit-text-fill-color: #1959e3 !important;
+            }
+        }
+        
+        /* 调试：确保所有元素都可见 */
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* 确保容器正确显示 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* 强制显示所有卡片 */
+        .glass-effect {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* 确保网格布局正常 */
+        .grid {
+            display: grid !important;
+        }
+        
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .glass-effect {
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+            }
         }
     </style>
 </head>
@@ -1607,6 +1694,49 @@
             }
         `;
         document.head.appendChild(style);
+        
+        // 样式修复检查
+        function fixStyles() {
+            // 检查并修复标题显示
+            const title = document.querySelector('h1');
+            if (title) {
+                title.style.display = 'block';
+                title.style.visibility = 'visible';
+                title.style.opacity = '1';
+            }
+            
+            // 检查并修复5日游文字
+            const gradientText = document.querySelector('.gradient-bg.bg-clip-text.text-transparent');
+            if (gradientText) {
+                // 如果渐变不工作，使用备用颜色
+                const computedStyle = window.getComputedStyle(gradientText);
+                if (computedStyle.color === 'rgba(0, 0, 0, 0)' || computedStyle.color === 'transparent') {
+                    gradientText.style.color = '#1959e3';
+                    gradientText.style.webkitTextFillColor = '#1959e3';
+                }
+            }
+            
+            // 检查并修复玻璃效果
+            document.querySelectorAll('.glass-effect').forEach(element => {
+                element.style.display = 'block';
+                element.style.visibility = 'visible';
+                element.style.opacity = '1';
+                
+                // 如果backdrop-filter不支持，使用备用样式
+                if (!CSS.supports('backdrop-filter', 'blur(10px)')) {
+                    element.style.background = 'rgba(255, 255, 255, 0.1)';
+                    element.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+                }
+            });
+            
+            console.log('样式修复完成');
+        }
+        
+        // 页面加载完成后执行修复
+        fixStyles();
+        
+        // 延迟执行一次修复，确保所有资源加载完成
+        setTimeout(fixStyles, 1000);
     </script>
 </body>
 </html>
