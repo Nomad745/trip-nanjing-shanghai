@@ -272,8 +272,9 @@
                     <div class="space-y-8">
                         <!-- 北京出发路线 -->
                         <div class="relative">
-                            <div class="text-xs text-blue-400 mb-2 font-bold">北京出发路线</div>
-                            <div class="flex items-center justify-between">
+                            <div class="text-xs text-blue-400 mb-3 font-bold">北京出发路线</div>
+                            <!-- 桌面版路线 -->
+                            <div class="hidden md:flex items-center justify-between">
                                 <div class="flex flex-col items-center">
                                     <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-lg font-black text-white mb-2">北</div>
                                     <div class="text-xs text-center">
@@ -324,12 +325,52 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <!-- 移动端路线 -->
+                            <div class="md:hidden space-y-4">
+                                <div class="flex items-center gap-3 p-3 rounded-lg bg-blue-500/10">
+                                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-sm font-black text-white">北</div>
+                                    <div class="flex-1">
+                                        <div class="font-bold text-sm">北京出发</div>
+                                        <div class="text-xs text-gray-400">09:00航班</div>
+                                    </div>
+                                    <i class="fas fa-plane text-blue-500"></i>
+                                </div>
+                                
+                                <div class="flex items-center gap-3 p-3 rounded-lg bg-purple-500/10">
+                                    <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-sm font-black text-white">宁</div>
+                                    <div class="flex-1">
+                                        <div class="font-bold text-sm">南京2天</div>
+                                        <div class="text-xs text-gray-400">古都文化</div>
+                                    </div>
+                                    <i class="fas fa-train text-green-500"></i>
+                                </div>
+                                
+                                <div class="flex items-center gap-3 p-3 rounded-lg bg-green-500/10">
+                                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-sm font-black text-white">沪</div>
+                                    <div class="flex-1">
+                                        <div class="font-bold text-sm">上海3天</div>
+                                        <div class="text-xs text-gray-400">现代都市</div>
+                                    </div>
+                                    <i class="fas fa-plane-departure text-blue-500"></i>
+                                </div>
+                                
+                                <div class="flex items-center gap-3 p-3 rounded-lg bg-blue-500/10">
+                                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-sm font-black text-white">北</div>
+                                    <div class="flex-1">
+                                        <div class="font-bold text-sm">返回北京</div>
+                                        <div class="text-xs text-gray-400">17:00航班</div>
+                                    </div>
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                            </div>
                         </div>
                         
                         <!-- 三亚出发路线 -->
                         <div class="relative">
-                            <div class="text-xs text-orange-400 mb-2 font-bold">三亚出发路线</div>
-                            <div class="flex items-center justify-between">
+                            <div class="text-xs text-orange-400 mb-3 font-bold">三亚出发路线</div>
+                            <!-- 桌面版路线 -->
+                            <div class="hidden md:flex items-center justify-between">
                                 <div class="flex flex-col items-center">
                                     <div class="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center text-lg font-black text-white mb-2">三</div>
                                     <div class="text-xs text-center">
@@ -378,6 +419,45 @@
                                         <div class="font-bold">返回三亚</div>
                                         <div class="text-gray-400">18:30航班</div>
                                     </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 移动端路线 -->
+                            <div class="md:hidden space-y-4">
+                                <div class="flex items-center gap-3 p-3 rounded-lg bg-orange-500/10">
+                                    <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-sm font-black text-white">三</div>
+                                    <div class="flex-1">
+                                        <div class="font-bold text-sm">三亚出发</div>
+                                        <div class="text-xs text-gray-400">08:30航班</div>
+                                    </div>
+                                    <i class="fas fa-plane text-orange-500"></i>
+                                </div>
+                                
+                                <div class="flex items-center gap-3 p-3 rounded-lg bg-purple-500/10">
+                                    <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-sm font-black text-white">宁</div>
+                                    <div class="flex-1">
+                                        <div class="font-bold text-sm">南京2天</div>
+                                        <div class="text-xs text-gray-400">古都文化</div>
+                                    </div>
+                                    <i class="fas fa-train text-green-500"></i>
+                                </div>
+                                
+                                <div class="flex items-center gap-3 p-3 rounded-lg bg-green-500/10">
+                                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-sm font-black text-white">沪</div>
+                                    <div class="flex-1">
+                                        <div class="font-bold text-sm">上海3天</div>
+                                        <div class="text-xs text-gray-400">现代都市</div>
+                                    </div>
+                                    <i class="fas fa-plane-departure text-orange-500"></i>
+                                </div>
+                                
+                                <div class="flex items-center gap-3 p-3 rounded-lg bg-orange-500/10">
+                                    <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-sm font-black text-white">三</div>
+                                    <div class="flex-1">
+                                        <div class="font-bold text-sm">返回三亚</div>
+                                        <div class="text-xs text-gray-400">18:30航班</div>
+                                    </div>
+                                    <i class="fas fa-check text-green-500"></i>
                                 </div>
                             </div>
                         </div>
@@ -677,37 +757,53 @@
                 </div>
                 
                 <div class="grid grid-cols-2 gap-3 text-sm">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-id-card text-blue-500"></i>
-                        <span>身份证</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-4 flex justify-center">
+                            <i class="fas fa-id-card text-blue-500"></i>
+                        </div>
+                        <span class="flex-1">身份证</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-graduation-cap text-green-500"></i>
-                        <span>学生证</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-4 flex justify-center">
+                            <i class="fas fa-graduation-cap text-green-500"></i>
+                        </div>
+                        <span class="flex-1">学生证</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-mobile-alt text-purple-500"></i>
-                        <span>手机充电宝</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-4 flex justify-center">
+                            <i class="fas fa-mobile-alt text-purple-500"></i>
+                        </div>
+                        <span class="flex-1">手机充电宝</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-camera text-orange-500"></i>
-                        <span>相机</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-4 flex justify-center">
+                            <i class="fas fa-camera text-orange-500"></i>
+                        </div>
+                        <span class="flex-1">相机</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-sun text-yellow-500"></i>
-                        <span>防晒霜</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-4 flex justify-center">
+                            <i class="fas fa-sun text-yellow-500"></i>
+                        </div>
+                        <span class="flex-1">防晒霜</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-umbrella text-blue-500"></i>
-                        <span>折叠伞</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-4 flex justify-center">
+                            <i class="fas fa-umbrella text-blue-500"></i>
+                        </div>
+                        <span class="flex-1">折叠伞</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-pills text-red-500"></i>
-                        <span>常用药品</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-4 flex justify-center">
+                            <i class="fas fa-pills text-red-500"></i>
+                        </div>
+                        <span class="flex-1">常用药品</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-shoe-prints text-gray-500"></i>
-                        <span>舒适鞋子</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-4 flex justify-center">
+                            <i class="fas fa-shoe-prints text-gray-500"></i>
+                        </div>
+                        <span class="flex-1">舒适鞋子</span>
                     </div>
                 </div>
             </div>
@@ -720,29 +816,41 @@
                 </div>
                 
                 <div class="space-y-3 text-sm">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-map-marked-alt text-blue-500"></i>
-                        <span>高德地图</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-5 flex justify-center">
+                            <i class="fas fa-map-marked-alt text-blue-500"></i>
+                        </div>
+                        <span class="flex-1">高德地图</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <span>大众点评</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-5 flex justify-center">
+                            <i class="fas fa-star text-yellow-500"></i>
+                        </div>
+                        <span class="flex-1">大众点评</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-subway text-green-500"></i>
-                        <span>Metro大都会</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-5 flex justify-center">
+                            <i class="fas fa-subway text-green-500"></i>
+                        </div>
+                        <span class="flex-1">Metro大都会</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-castle text-purple-500"></i>
-                        <span>🏰 迪士尼官方</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-5 flex justify-center">
+                            <i class="fas fa-castle text-purple-500"></i>
+                        </div>
+                        <span class="flex-1">迪士尼官方</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-utensils text-orange-500"></i>
-                        <span>美团</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-5 flex justify-center">
+                            <i class="fas fa-utensils text-orange-500"></i>
+                        </div>
+                        <span class="flex-1">美团</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-bed text-pink-500"></i>
-                        <span>携程</span>
+                    <div class="flex items-center gap-3">
+                        <div class="w-5 flex justify-center">
+                            <i class="fas fa-bed text-pink-500"></i>
+                        </div>
+                        <span class="flex-1">携程</span>
                     </div>
                 </div>
             </div>
